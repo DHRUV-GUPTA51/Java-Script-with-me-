@@ -72,3 +72,79 @@ let rectangle = {
 
 rectangle.draw();
 console.log(rectangle.length);
+
+
+//object and FactoRy function
+function createRectangle() {
+    return obj = {
+        length: 1,
+        breadth: 1,
+        theta: 1,
+        draw() {
+            length: 1;
+        }
+    }
+};
+let functionstore = createRectangle();
+console.log(functionstore);
+
+
+//passing using functions
+
+function createCircle(radiusss, ) {
+    const pi = 3.14;
+    return {
+        radius: radiusss,
+        parimeter() {
+            console.log(2 * pi * radiusss);
+        }
+    };
+
+}
+let variablex = createCircle(5);
+variablex.parimeter();
+
+
+//CONSTRUCTOR THIS > KEY WORD WHICH SHOWS WHICH OBJECTT IS BEINg CALLED 
+//in constructor we initialize all the vlaues through this 
+//NEW keyword gives us empty objects 
+///nayi object create krne ke lie hm new keywod ka use krte hai
+//creaton using constructor
+function rectn(len, bre) {
+    this.length = len;
+    this.breadth = bre;
+    this.recarea = function() {
+        console.log(len * bre);
+    }
+};
+let vari = new rectn(5, 4);
+// let areaaof = mew recarea;
+
+//functions are also ojects in js 
+//functions are also constructor in js 
+
+
+
+//NEXT TOPIC 
+
+// primitive are copied by their values.. 
+// refrences are copied by their addresses..
+
+// example of primitive 
+
+
+let aa = 10;
+let b = aa;
+aa++;
+console.log(aa);
+console.log(b);
+
+
+//example of refrences
+
+let aaa = { value: 10 };
+
+let bb = aaa;
+aaa.value++;
+console.log(aaa.value);
+console.log(bb.value);
