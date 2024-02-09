@@ -148,3 +148,12 @@ let bb = aaa;
 aaa.value++;
 console.log(aaa.value);
 console.log(bb.value);
+
+//a==b==11
+
+//primitive ke andr funcrion ke andr copy create hte hai which means the fuunctions acts as a seperate variable
+
+
+
+
+let lastname = gupta
