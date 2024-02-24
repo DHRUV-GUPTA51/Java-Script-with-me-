@@ -1,0 +1,5 @@
+// by defualt synchronous ->which means ek ek bad ek thread execute hota hai isme
+
+// single threaded language hai 
+
+// all this is a default behaviour
