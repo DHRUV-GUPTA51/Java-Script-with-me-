@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event listeners </title>
+</head>
+
+<body style="background-color: grey; color: aliceblue;">
+    <h2>amazing images</h2>
+
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+
+
+        </ul>
+    </div>
+
+
+</body>
+<script>
+    //    PRACTICING EVENTS IN SUCH A WAY THAT THE BASIC IS CLEARED 
+
+
+    // document.getElementById('prayer').addEventListener('click', function(e) {
+    //     console.log('clicked a girl praying');
+    //     // e.stopPropagation();
+    // }, false)
+
+    // document.getElementById('images').addEventListener('click', function(e) {
+    //     console.log('a whole lot of images are there ')
+    // }, false)
+
+    // document.getElementById('google').addEventListener('click', function(e) {
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log(`i've clicked on google without opening the link `)
+    // }, false)
+
+
+
+    //MOVING ON TO SOME PROJECT WORK (immage par click kru aur sari image gayb hjae)
+
+    // document.querySelector('#images').addEventListener('click', function(e) {
+    //     console.log(e.target.parentNode);
+    //     // this shows the ADDRESS OF THW IMge to obe targeted
+    //     //remmoving a pictur to be clicked 
+    //     let removeit = e.target.parentNode
+    //     removeit.remove();
+    //     //when clicking on the google link it shows that the parent of google link is unoredered list which means that tall the li items in the uunordered list will be removed and hence cleared out
+    //     //   to prevent that we need to use the if else statement 
+
+
+    document.querySelector('#images').addEventListener('click', function(e) {
+        console.log(e.target.parentNode);
+        let removeit = e.target.parentNode
+        if (e.target.tagName === 'IMG') {
+            removeit.remove();
+        }
+
+    })
+</script>
+
+</html>
