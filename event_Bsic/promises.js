@@ -39,3 +39,23 @@ p.then((message) => {
 }).catch((message) => {
     console.log('this is iin the catch ' + message);
 })
+
+
+
+async function getallusers() {
+    const response = await fetch('')
+    const data = response.json()
+    console.log(data)
+}
+
+
+
+fetch('https://api.github.com/users/DHRUV-GUPTA51')
+    .then((res) => {
+        console.log(res.json());
+        return res.json();
+    }).then((data) => {
+            console.log(data);
+        }
+
+    )
